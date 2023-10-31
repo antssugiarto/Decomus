@@ -1,0 +1,323 @@
+:root {
+    --primary: rgb(10, 134, 10);
+    --secondary: rgb(24, 179, 24);
+    --tertiary: rgb(32, 204, 32);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Coolvetica, sans-serif;
+}
+
+/* == HEADER == */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 1.3rem 7%;
+    z-index: 1;
+    transition: .3s;
+}
+
+header.sticky {
+    padding: .5rem 8%;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: .15rem .15rem .2rem rgba(0,0,0,0.3);
+}
+
+header.sticky a {
+    text-decoration: none;
+    text-shadow: none;
+    color: black;
+}
+
+    /* -- TITLE -- */
+#h-title h1, #mb-text h1, #fp-title h1 {
+    font-weight: 400;
+}
+
+#h-title h1 span, #mb-text h1 span, #fp-title h1 span {
+    margin: 0 .1rem;
+    padding: .2rem;
+    font-weight: 600;
+    text-shadow: none;
+    background-color: white;
+    color: var(--secondary);
+    border-radius: .8rem;
+}
+
+header.sticky #h-title h1 span {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+    /* -- MENU -- */
+#h-menu a {
+    display: inline-block;
+    margin: 0 .1rem;
+    padding: .5rem;
+    font-size: 1.25rem;
+    font-family: coolvetica;
+    letter-spacing: .05rem;
+    border-radius: .5rem;
+    transition: .2s;
+}
+
+#h-menu a:hover {
+    background-color: var(--secondary);
+}
+
+header.sticky #h-menu a:hover {
+    color: white;
+}
+
+/* == MAIN == */
+    /* -- BANNER -- */
+#m-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+        /* ++ TEXT ++ */
+#mb-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3rem;
+    color: white;
+    text-shadow: .15rem .15rem .2rem rgba(0,0,0,0.3);
+}
+
+#mb-text h1 {
+    font-size: 2.5rem;
+}
+
+#mb-text p {
+    font-size: 1.7rem;
+}
+
+        /* ++ SEARCH ++ */
+#mb-search input {
+    padding: 0 .5rem;
+    height: 2rem;
+    width: 28rem;
+    margin: 0 .2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+#mb-search input:focus {
+    outline: .2rem solid var(--secondary);
+}
+
+#mb-search button {
+    height: 2rem;
+    width: 2.5rem;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: .5rem;
+    transition: .2s;
+}
+
+#mb-search button:hover {
+    background-color: var(--tertiary);
+}
+
+    /* -- ABOUT -- */
+#m-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    height: 89vh;
+    background-color: white;
+}
+
+        /* ++ PICTURE ++ */
+#ma-picture img {
+    height: 30rem;
+    width: 30rem;
+    border-radius: 2rem;
+}
+
+        /* ++ TEXT ++ */
+#ma-text {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    margin-left: 5rem;
+}
+
+#ma-text h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+#ma-text p {
+    font-family: calibri;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+    /* -- PHOTOS, VIDEOS -- */
+#m-photos, #m-videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    height: 89vh;
+    background-color: white;
+}
+
+#m-photos h1, #m-videos h1 {
+    font-size: 2.5rem;
+}
+
+        /* ++ COLLECT (Latest, Trending) ++ */
+.mp-collect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+}
+
+        /* ++ CARD ++ */
+#mpl-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.mplc-item img, .mplc-item iframe{
+    height: 19vmin;
+    width: 17vmax;
+}
+
+.mplci-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+    /* -- CONTACT -- */
+#m-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    height: 89vh;
+    background-color: white;
+}
+
+        /* ++ TITLE ++ */
+#mc-title h1 {
+    font-size: 2.5rem;
+}
+        /* ++ CONTENT ++ */
+#mc-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+            /* ** INPUT ** */
+#mc-input label {
+    font-size: 1.4rem;
+}
+
+#mc-input input {
+    margin: 0 0 1rem 0;
+    padding: .2rem;
+    height: 2rem;
+    width: 30.5rem;
+    font-size: 1.1rem;
+    font-family: calibri;
+}
+
+#mc-input textarea {
+    margin: 0 0 1rem 0;
+    padding: .5rem;
+    height: 10rem;
+    width: 30rem;
+    font-size: 1.1rem;
+    font-family: calibri;
+    resize: none;
+}
+
+#mc-input textarea:focus, #mc-input input:focus {
+    outline: .1rem solid var(--secondary);
+}
+
+#mc-input button {
+    height: 3rem;
+    width: 31.2rem;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    transition: .2s;
+}
+
+#mc-input button:hover {
+    background-color: var(--secondary);
+}
+
+/* == FOOTER == */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 15vh;
+    background-color: var(--primary);
+    color: white;
+}
+
+    /* -- PROFILE -- */
+#f-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem 5rem;
+}
+
+        /* ++ SOCIAL MEDIA ++ */
+#fp-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#fp-social h4, a {
+    font-family: calibri;
+    text-decoration: none;
+    color: white;
+}
+
+
+

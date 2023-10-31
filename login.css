@@ -1,0 +1,56 @@
+:root {
+    --primary: rgb(10, 134, 10);
+    --secondary: rgb(24, 179, 24);
+    --tertiary: rgb(32, 204, 32);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: calibri;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(243, 243, 243);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    width: 40vw;
+    line-height: 1.5rem;
+    border-radius: .8rem;
+    background-color: var(--tertiary);
+}
+
+label {
+    font-weight: bold;
+    color: white;
+}
+
+input {
+    height: 1.6rem;
+    width: 13rem;
+    padding: .2rem;
+    border: none;
+    border-radius: .3rem;
+}
+
+button {
+    padding: .3rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background-color: var(--primary);
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
